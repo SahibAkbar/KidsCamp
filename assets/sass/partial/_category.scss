@@ -1,0 +1,212 @@
+.breadcrumb{
+    nav{
+        ol{
+            margin: 20px 0px;
+            padding: 8px 15px;
+            background: #f7f7f7;
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-weight: 400;
+            li{
+                a{
+                    color: #000;
+                    svg{
+                        font-size: 15px;
+                        fill: #000;
+                        color: #000;
+                        transition: all 0.3s ease;
+                    }
+                    &:hover{
+                        color: #f54676;
+                        svg{
+                            fill: #f54676;
+                            color: #f54676;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.category-page{
+    .left-filter{
+        .category-sidebar{
+            margin-bottom: 20px;
+            h5{
+                font-size: 14px;
+                color: #000;
+                font-weight: 500;
+                background-color: #f7f7f7;
+                border: none;
+                text-transform: uppercase;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding: 10px 15px;
+                margin: 0;
+            }
+            .category-sidebar-list{
+                li{
+                    a{
+                        display: block;
+                        border: 1px solid #eee;
+                        padding: 12px 12px;
+                        text-transform: capitalize;
+                        font-weight: 400;
+                        border-radius: 0;
+                        color: #555;
+                        &:hover{
+                            color: #f54676;
+                        }
+                    }
+                    .active{
+                        color: #f54676;
+                    }
+                }
+            }
+        }
+        .catfilter{
+            margin-bottom: 20px;
+            .panel-head{
+                .filtr-title{
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: 500;
+                    background-color: #f7f7f7;
+                    border: none;
+                    text-transform: uppercase;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    padding: 10px 15px;
+                    margin-bottom: 0;
+                }
+                .filter-large{}
+            }
+        }
+        .color,
+        .size{
+            h6{
+                font-size: 14px;
+                color: #555;
+                border: 1px solid #eee;
+                padding: 12px 12px;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+            .check{
+                display: block;
+                padding: 10px 15px;
+                margin-bottom: -1px;
+                background-color: #fff;
+                border: 1px solid #eee;
+                border-radius: 0;
+                .input{}
+                label{
+                    padding-left: 5px;
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+            }
+        }
+        .refinebtn{
+            border-top-width: 0;
+            padding: 10px 15px;
+            background-color: #fff;
+            text-align: end;
+            border: 1px solid #eee;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            button{
+                margin: 0;
+            }
+        }
+    }
+    .right{
+        .refines{
+            margin-bottom: 20px;
+            h1{
+                text-transform: capitalize;
+                font-size: 18px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            ul{
+                display: inline-block;
+                margin: 0;
+                li{
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                    font-size: 12px;
+                    padding: 6px 12px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    text-transform: capitalize;
+                    margin-bottom: 4px;
+                    font-weight: 500;
+                    display: inline-block;
+                    a{
+                        color: #000;
+                        &:hover{
+                            color: #f54676;
+                        }
+                    }
+                }
+            }
+        }
+        .cate-border{
+            background-color: #fff;
+            margin: 0 0 20px 0;
+            padding: 10px 0px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            align-items: center;
+            .filter-btn{
+                button{
+                    margin: 0;
+                }
+            }
+            .link-btn{
+                color: #000;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .select-input{
+                display: flex;
+                align-items: center;
+                label{
+                    font-size: 12px;
+                    color: #000;
+                    padding: 5px 10px;
+                }
+                select{
+                    height: 30px;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        .product-card{
+            .caption{
+                .rating{
+                    bottom: 23%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+    .category-page{
+        .compare-text{
+            text-align: end;
+        }
+        .filter-btn{
+            text-align: end;
+        }
+    }
+}

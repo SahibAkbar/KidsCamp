@@ -20,6 +20,96 @@ $('.homesliderss').owlCarousel({
         }
     }
 })
+$('.testi-cont').owlCarousel({
+  smartSpeed:1000,
+  loop:false,
+  margin:10,
+  nav:false,
+  navText: ['<i class="fa-light fa-angle-left"></i>','<i class="fa-light fa-angle-right"></i>'],
+  dots: true,
+  responsive:{
+      0:{
+        nav:false,
+        items:1
+      },
+      600:{
+        nav:false,
+        items:2
+      },
+      1000:{
+        nav:false,
+        items:3
+      }
+  }
+})
+$('.best-productoms').owlCarousel({
+  smartSpeed:1000,
+  loop:false,
+  margin:10,
+  nav:true,
+  navText: ['<i class="fa-thin fa-left-long"></i>','<i class="fa-thin fa-right-long"></i>'],
+  dots: false,
+  responsive:{
+      0:{
+        nav:true,
+        items:1
+      },
+      600:{
+        nav:true,
+        items:2
+      },
+      1000:{
+        nav:true,
+        items:3
+      }
+  }
+})
+$('.home-blog').owlCarousel({
+  smartSpeed:1000,
+  loop:false,
+  margin:10,
+  nav:true,
+  navText: ['<i class="fa-thin fa-left-long"></i>','<i class="fa-thin fa-right-long"></i>'],
+  dots: false,
+  responsive:{
+      0:{
+        nav:true,
+        items:1
+      },
+      600:{
+        nav:true,
+        items:2
+      },
+      1000:{
+        nav:true,
+        items:2
+      }
+  }
+})
+$('.quickview').owlCarousel({
+  smartSpeed:1000,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:3000,
+  nav:false,
+  navText: ['<i class="fa-thin fa-left-long"></i>','<i class="fa-thin fa-right-long"></i>'],
+  dots: false,
+  responsive:{
+      0:{
+        nav:false,
+        items:1
+      },
+      600:{
+        nav:false,
+        items:1
+      },
+      1000:{
+        nav:false,
+        items:1
+      }
+  }
+})
 $('.categoryslider').owlCarousel({
   smartSpeed:1000,
   loop:true,
@@ -86,28 +176,75 @@ $('.brands').owlCarousel({
       }
   }
 })
-// Counter Plus Minus start
-// $(document).ready(function() {
-//     $('.minus').click(function () {
-//         var $input = $(this).parent().find('input');
-//         var count = parseInt($input.val()) - 1;
-//         count = count < 1 ? 1 : count;
-//         $input.val(count);
-//         $input.change();
-//         return false;
-//     });
-//     $('.plus').click(function () {
-//         var $input = $(this).parent().find('input');
-//         $input.val(parseInt($input.val()) + 1);
-//         $input.change();
-//         return false;
-//     });
-// });
 //Tooltip start
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 //Tooltip End
 
+// sticky header start
+$(window).scroll(function(){
+  var sticky = $('.head-bottom'),
+  scroll = $(window).scrollTop();
+  if (scroll >= 100) sticky.addClass('sticky');
+  else sticky.removeClass('sticky');
+});
+// sticky header end
+
+//seacrh toogle add clas jquery
+$(document).ready(function(){
+  $("#search_toggle").click(function(){
+    $("#search").toggleClass("active-search");
+  });
+});
+$(document).ready(function(){
+  $("#close-search").click(function(){
+    $("#search").removeClass("active-search");
+  });
+});
+//seacrh toogle add clas jquery
+
+// qtycounter input start
+$(document).ready(function(){
+  $('.qtyplus').click(function(e){
+    e.preventDefault();
+    let qty = $(this).parent().parent().find('input[name="quantity"]');
+    let currentVal = parseInt(qty.val());
+    if (!isNaN(currentVal)) {
+      qty.val(currentVal + 1);
+    } else {
+      qty.val(1);
+    }
+  });
+  $(".qtyminus").click(function(e) {
+    e.preventDefault();
+    let qty = $(this).parent().parent().find('input[name="quantity"]');
+    let currentVal = parseInt(qty.val());
+    if (!isNaN(currentVal)) {
+      if(currentVal>1){
+        qty.val(currentVal - 1);
+      } else {
+        qty.val(1);
+      }
+    } else {
+      qty.val(1);
+    }
+  });
+});
+// qtycounter input end2
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 10,
+  navigation: false,
+  thumbs: {
+    swiper: swiper,
+  },
+});
 
 //Hover Image start
 // $('#latest .row .card .image').each(function(){
